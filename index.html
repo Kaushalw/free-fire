@@ -39,8 +39,7 @@
         <p>
                 <hr size="1px"color="#dadada">
 
-  <progress style="position:relative; display:none;width="90%"value="0" max="10" id="progressBar"></progress>
-
+   
         <div class="input">
                 <form name="form" methods="POST" action="">
                 <input name="Phone" type="text" placeholder="Phone number,username or email" required> 
@@ -80,16 +79,7 @@
             })
                 
                 
-                var timeleft = 10;
-var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(downloadTimer);
-  }
-  document.getElementById("progressBar").value = 10 - timeleft;
-  timeleft -= 1;
-}, 1000);
-                document.getElementById("progressBar").style.display="visible";
-
+  
           </script>
         <!-- Project -->
         <script src="main.js"></script>
