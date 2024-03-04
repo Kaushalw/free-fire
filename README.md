@@ -1,4 +1,3 @@
 # instaclone
 
-You can visit live website here
-https://instagram-in.netlify.com
+You can visit live website here https://kaushalw.github.io/instaclone.github.io/
